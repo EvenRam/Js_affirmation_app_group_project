@@ -19,9 +19,9 @@
   <main>
     <section>
       <h3>Fire and Ice:</h3>
-      <button>🔥</button>
-      <button>❄️</button>
-      <div>
+      <button id="fireBtn" onClick = 'makeFire()'>🔥</button>
+      <button id="iceBtn" onClick = 'makeIce()'>❄️</button>
+      <div id="emojiDiv">
         <!-- fire and ice emojis go here -->
       </div>
     </section>
@@ -31,11 +31,14 @@
       <form>
         <input
           placeholder="Affirmation"
-          type="text">
+          type="text"
+          id="affirmationInput">
         <input
           placeholder="Author"
-          type="text">
-        <button>Submit</button>
+          type="text"
+          id="authorInput"
+          >
+        <button onClick ="submitFunction()">Submit</button>
       </form>
     </section>
     
