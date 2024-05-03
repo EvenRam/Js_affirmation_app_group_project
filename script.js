@@ -43,12 +43,26 @@ add submit Function √
 
 */ 
 
-function submitFunction() {
+function submitFunction(event) {
   console.log("submitFunction() works!")
-  //event.preventDefault();
+  event.preventDefault();
   let affirmationText = document.getElementById("affirmationInput").value
   let authorText = document.getElementById("authorInput").value
   console.log(`text check ${affirmationText}`)
   console.log(`author check ${authorText}`)
+
+  let tableText = document.getElementById("tableText")
+  console.log("current table text", tableText );
+  tableText.innerHTML += 
+  `<tr>
+  <td>${affirmationText}</td>
+   <td>${authorText}</td>
+   <td></td>
+ </tr>
+ `
 }
-submitFunction();
+
+
+
+
+
